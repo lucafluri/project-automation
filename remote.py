@@ -7,7 +7,7 @@ import json
 config = open("./config.json")
 file = json.load(config)
 token = file["token"]
-path = file["path"] 
+path = file["paths"][0]  # Use the first path in the paths list
 
 foldername = str(sys.argv[1])
 # path = os.environ.get('mp')         # add projects dirctory to the env vars

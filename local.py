@@ -5,7 +5,7 @@ import json
 
 config = open("./config.json")
 file = json.load(config)
-path = file["path"] 
+path = file["paths"][0] 
 
 foldername = str(sys.argv[1])
 # path = os.environ.get('mp')
