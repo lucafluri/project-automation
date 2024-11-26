@@ -9,7 +9,8 @@ path = file["path"]
 
 foldername = str(sys.argv[1])
 # path = os.environ.get('mp')
-_dir = path + '/' + foldername
+custom_path = sys.argv[2] if len(sys.argv) > 2 else path
+_dir = custom_path + '/' + foldername
 
 try:
     os.mkdir(_dir)
@@ -19,7 +20,9 @@ try:
     os.system('git add README.md')
     os.system('git commit -m "first commit"')
 
+
     print(f'{foldername} created locally')
+    os.startfile(_dir)
     os.system('code .')
 
 
